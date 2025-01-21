@@ -1,0 +1,12 @@
+The `calc()` function requires careful attention to spacing and operator precedence.  Ensure there are no spaces between the numbers and units (e.g., `20px` not `20 px`) and use parentheses to explicitly define the order of operations for complex calculations. For example:
+
+```css
+/* Incorrect */
+width: calc(100% - 20 px); /* Space between 20 and px */
+height: calc(50% + 10px * 2); /* Incorrect order of operations */
+
+/* Correct */
+width: calc(100% - 20px);
+height: calc(50% + (10px * 2));
+```
+Always test your `calc()` expressions thoroughly to prevent unexpected layout problems.
